@@ -1,0 +1,22 @@
+{
+  "name": "lesson25",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YuraLen/lesson25.git"
+  },
+  "author": "Yura Len",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YuraLen/lesson25/issues"
+  },
+  "homepage": "https://github.com/YuraLen/lesson25#readme",
+  "devDependencies": {
+    "eslint": "^8.1.0"
+  }
+}
