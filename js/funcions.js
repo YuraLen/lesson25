@@ -1,41 +1,17 @@
-function dowbleElem(){
-  const numbers = [1, 2, 3, 6, 9]
+const dowbleElem = (arr) => {
+  let arrNew = [];
 
-  const result = numbers.map(function(val){return val*2;});
-  console.log(result);
-}
-
-function notAnArrey(arr){
-  if(!Array.isArray(arr)){
-    return 'error';
+  if (Array.isArray(arr) === false) {
+    return "error";
   }
-}
-
-function nonNumericElementsInArray(arr) {
-  function isntNumber(value){
-    return typeof value === 'string';
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof arr[i] === "number") {
+      arrNew.push(arr[i] * 2);
+    }
   }
-  if(arr.every(isntNumber)){
-    return 'error';
+  arrNew = arrNew.filter(Number);
+  if (arrNew.length === 0) {
+    return "error";
   }
-
-  // arr.forEach((item) => {
-  //   if(typeof item === 'number'){
-  //     return 'error';
-  //   }
-  // });
-
-  // if(arr.filter(item => typeof item === 'number')){
-  //   return 'error';
-  // }
-  // if(typeof (arr) !== 'number'){
-  //   return 'error';
-  // } 
-}
-
-function moreThanNumericElem(arr){
-  if(arr.filter(item => typeof item !== 'number' && typeof item !== 'string')){
-    return 'error';
-  }
-}
-
+  return arrNew;
+};
