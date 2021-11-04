@@ -13,6 +13,6 @@ describe('Тесты с массивами', () => {
   });
 
   it('В массиве не только числовые элементы.', () => {
-    assert.deepEqual(dowbleElem(['someText', 3]), [6])
+    assert.deepEqual(dowbleElem(['text', 5]), [10])
   });
 })
