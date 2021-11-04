@@ -1,13 +1,18 @@
-describe("Тесты с массивами", function() { 
-	it("Передача не массива", () => { 
-		assert.equal(notAnArrey('1', '2'), 'error'); 
-	}); 
+describe('Тесты с массивами', () => {
 
-  it("В массиве нечисловые элементы", () => {
-    assert.equal(nonNumericElementsInArray(['hello']), 'error');
-  })
+  it('Передача не массива', () => {
+    const user = {
+      name: 'Yura',
+      age: 18,
+    }
+    assert.equal(dowbleElem(user), 'error')
+  });
 
-  it("В массиве не только числовые элементы.", () => {
-    assert.equal(moreThanNumericElem([1, 'hello']), 'error')
-  })
-});
+  it('В массиве нечисловые элементы', () => {
+    assert.equal(dowbleElem(["test", "", "text"]), 'error')
+  });
+
+  it('В массиве не только числовые элементы.', () => {
+    assert.deepEqual(dowbleElem(['someText', 3]), [6])
+  });
+})
