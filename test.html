@@ -10,10 +10,6 @@
 
 <body>
 
-  <script src="./js/test.js"></script>
-  <script src="./js/script.js"></script>
-  <script src="./js/funcions.js"></script>
-
   <!-- стили mocha для отображения результатов -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.css">
   <!-- библиотека mocha -->
@@ -27,6 +23,17 @@
   <script>
     // chai предоставляет большое количество функций. Объявим assert глобально 
     const assert = chai.assert;
+  </script>
+  <script src="./js/test.js"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/funcions.js"></script>
+
+  <!-- элемент с id="mocha" будет содержать результаты тестов -->
+  <div id="mocha"></div>
+
+  <!-- запуск тестов -->
+  <script>
+    mocha.run();
   </script>
 
 </body>
